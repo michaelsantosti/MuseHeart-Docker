@@ -1,8 +1,8 @@
 # Welcome to Muse-Heart Docker 👋
 ![Version](https://img.shields.io/badge/version-0.2-blue.svg?cacheSeconds=2592000)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
-![GitHub repo size](https://img.shields.io/github/repo-size/michaelsantosti/MuseHeart-Docker?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/michaelsantosti/MuseHeart-Docker?style=for-the-badge)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://raw.githubusercontent.com/michaelsantosti/MuseHeart-Docker/main/LICENSE)
+![GitHub repo size](https://img.shields.io/github/repo-size/michaelsantosti/MuseHeart-Docker)
+![GitHub forks](https://img.shields.io/github/forks/michaelsantosti/MuseHeart-Docker)
 
 ```
 
