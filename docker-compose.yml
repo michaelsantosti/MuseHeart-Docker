@@ -89,3 +89,21 @@ services:
       PLAYING_PRESENCES: ${PLAYING_PRESENCES}
       CUSTOM_STATUS_PRESENCES: ${CUSTOM_STATUS_PRESENCES}
       STREAMING_PRESENCES: ${STREAMING_PRESENCES}
+    depends_on:
+      - wireguard
+      
+  wireguard:
+    image: linuxserver/wireguard
+    container_name: wireguard
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    volumes:
+      - vpn:/config
+      - /lib/modules:/lib/modules
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark=1
+    restart: unless-stopped
+
+volumes:
+  vpn:
