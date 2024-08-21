@@ -107,3 +107,6 @@ services:
       - net.ipv4.conf.all.src_valid_mark=1
     volumes:
       - warp:/var/lib/cloudflare-warp
+
+volumes:
+  warp:
