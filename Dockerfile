@@ -9,6 +9,7 @@ WORKDIR /usr/src/app
 RUN apt-get update \
 && apt-get install -y gcc \
 && apt-get install -y git \
+&& apt-get install -y procps \
 && apt-get clean
 
 RUN git clone https://github.com/zRitsu/MuseHeart-MusicBot.git .
