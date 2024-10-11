@@ -1,4 +1,4 @@
-FROM python:slim-bullseye
+FROM python:3.12-slim-bullseye
 
 ENV JAVA_HOME=/opt/java/openjdk
 COPY --from=eclipse-temurin:17 $JAVA_HOME $JAVA_HOME
