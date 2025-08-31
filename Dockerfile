@@ -1,4 +1,4 @@
-FROM python:3.12-slim-bullseye
+FROM python:3.13-slim-bullseye
 
 ENV JAVA_HOME=/opt/java/openjdk
 COPY --from=eclipse-temurin:17 $JAVA_HOME $JAVA_HOME
@@ -14,7 +14,7 @@ RUN apt-get update \
 
 RUN git clone https://github.com/zRitsu/MuseHeart-MusicBot.git .
 
-RUN pip install setuptools
+RUN python -m pip install -U pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 CMD ["python", "/usr/src/app/main.py"]
