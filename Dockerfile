@@ -14,7 +14,8 @@ RUN apt-get update \
 
 RUN git clone https://github.com/zRitsu/MuseHeart-MusicBot.git .
 
-RUN python -m pip install -U pip
+RUN pip install --no-cache-dir --upgrade pip \
+&& pip install --no-cache-dir "setuptools<81" jishaku
 RUN pip install --no-cache-dir -r requirements.txt
 
 CMD ["python", "/usr/src/app/main.py"]
