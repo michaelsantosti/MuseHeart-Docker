@@ -8,7 +8,7 @@ services:
       retries: 3
       start_period: 10s
     env_file:
-      - .env
+      - stack.env
     volumes:
       - data:/usr/src/app/local_database
 
