@@ -18,8 +18,7 @@ RUN pip install --no-cache-dir setuptools
 RUN pip install --no-cache-dir -r requirements.txt
 
 ENV PYTHONUNBUFFERED=1
-ENV PYTHONWARNINGS=default
 
-CMD ["python", "-u", "-W", "default", "/usr/src/app/main.py"]
+CMD ["python", "-u", "/usr/src/app/main.py"]
 
 EXPOSE 8080
