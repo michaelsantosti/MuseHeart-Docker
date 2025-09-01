@@ -1,4 +1,4 @@
-FROM python:3.13-slim-bullseye
+FROM python:3.11-slim-bullseye
 
 ENV JAVA_HOME=/opt/java/openjdk
 COPY --from=eclipse-temurin:17 $JAVA_HOME $JAVA_HOME
@@ -14,10 +14,12 @@ RUN apt-get update \
 
 RUN git clone https://github.com/zRitsu/MuseHeart-MusicBot.git .
 
-RUN pip install --no-cache-dir --upgrade pip \
-&& pip install --no-cache-dir "setuptools<81" jishaku
+RUN pip install --no-cache-dir setuptools
 RUN pip install --no-cache-dir -r requirements.txt
 
-CMD ["python", "/usr/src/app/main.py"]
+ENV PYTHONUNBUFFERED=1
+ENV PYTHONWARNINGS=default
+
+CMD ["python", "-u", "-W", "default", "/usr/src/app/main.py"]
 
 EXPOSE 8080
