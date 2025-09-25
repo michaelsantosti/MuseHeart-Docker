@@ -1,6 +1,7 @@
 services:
   museheart:
     build: .
+    restart: unless-stopped
     healthcheck:
       test: ["CMD-SHELL", "pgrep -f 'python /usr/src/app/main.py' || exit 1"]
       interval: 30s
